@@ -1,2 +1,1 @@
-import movies from "./movies.json";
-
+import movies from './movies.json' with { type: 'json' };
