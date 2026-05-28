@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/TTF-FULL-STACK-2025/movieapp-fiorio/issues"
   },
-  "homepage": "https://github.com/TTF-FULL-STACK-2025/movieapp-fiorio#readme"
+  "homepage": "https://github.com/TTF-FULL-STACK-2025/movieapp-fiorio#readme",
+  "devDependencies": {
+    "vite": "^8.0.14"
+  }
 }
