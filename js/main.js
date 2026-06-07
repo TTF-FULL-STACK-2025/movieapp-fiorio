@@ -36,11 +36,13 @@ function updateMoviesHtml() {
     movies.forEach(movie => {
         const movieElement = document.createElement("div");
 
-        // Card ultra-compatta: larghezza fissata a 110px
         movieElement.className = `
-            w-[110px]
-            min-w-[110px]
-            max-w-[110px]
+            w-[85px] min-w-[85px] max-w-[85px]
+            sm:w-[100px] sm:min-w-[100px] sm:max-w-[100px]
+            md:w-[115px] md:min-w-[115px] md:max-w-[115px]
+            lg:w-[130px] lg:min-w-[130px] lg:max-w-[130px]
+            xl:w-[145px] xl:min-w-[145px] xl:max-w-[145px]
+            h-[170px] sm:h-[195px] md:h-[215px] lg:h-[240px] xl:h-[265px]
             bg-zinc-900
             rounded-md
             overflow-hidden
@@ -50,12 +52,13 @@ function updateMoviesHtml() {
             transition-all
             duration-200
             flex-shrink-0
+            flex flex-col
             group
             shadow-sm
         `;
 
         movieElement.innerHTML = `
-            <div class="relative aspect-[2/3] w-full overflow-hidden bg-zinc-800">
+            <div class="relative aspect-[2/3] w-full overflow-hidden bg-zinc-800 flex-shrink-0">
                 <img 
                     src="https://image.tmdb.org/t/p/w300${movie.poster_path}" 
                     alt="${movie.title}" 
@@ -70,29 +73,28 @@ function updateMoviesHtml() {
                     right-1 
                     bg-black/85 
                     text-white 
-                    text-[8px] 
+                    text-[7px] sm:text-[7.5px] md:text-[8px] lg:text-[9px] xl:text-[10px]
                     px-1 
                     py-0.2
                     rounded-[3px]
                     font-black
                 ">
-                    ⭐${movie.vote_average.toFixed(1)}
+                    ⭐${movie.vote_average ? movie.vote_average.toFixed(1) : "0.0"}
                 </span>
             </div>
 
-            <div class="p-1.5 whitespace-normal leading-tight">
+            <div class="p-1 sm:p-1.5 whitespace-normal leading-tight flex flex-col justify-between flex-grow overflow-hidden">
                 <h2 class="
-                    text-[9px]
+                    text-[7px] sm:text-[8px] md:text-[9px] lg:text-[10px] xl:text-[11px]
                     font-bold 
                     text-zinc-200 
-                    line-clamp-1
-                    truncate
+                    line-clamp-2
                     group-hover:text-red-500
                     transition-colors
                 " title="${movie.title}">
                     ${movie.title}
                 </h2>
-                <p class="text-[8px] text-zinc-500 font-semibold mt-0.5">
+                <p class="text-[6px] sm:text-[7px] md:text-[8px] lg:text-[9px] xl:text-[10px] text-zinc-500 font-semibold mt-auto">
                     ${movie.release_date?.split("-")[0] || "N/D"}
                 </p>
             </div>
@@ -137,13 +139,13 @@ function updateSeriesHtml() {
     series.forEach(serie => {
         const serieElement = document.createElement("div");
 
-        console.log(serie);
-
-        // Card ultra-compatta: larghezza fissata a 110px
         serieElement.className = `
-            w-[110px]
-            min-w-[110px]
-            max-w-[110px]
+            w-[85px] min-w-[85px] max-w-[85px]
+            sm:w-[100px] sm:min-w-[100px] sm:max-w-[100px]
+            md:w-[115px] md:min-w-[115px] md:max-w-[115px]
+            lg:w-[130px] lg:min-w-[130px] lg:max-w-[130px]
+            xl:w-[145px] xl:min-w-[145px] xl:max-w-[145px]
+            h-[170px] sm:h-[195px] md:h-[215px] lg:h-[240px] xl:h-[265px]
             bg-zinc-900
             rounded-md
             overflow-hidden
@@ -153,15 +155,18 @@ function updateSeriesHtml() {
             transition-all
             duration-200
             flex-shrink-0
+            flex flex-col
             group
             shadow-sm
         `;
 
+        const serieTitle = serie.name || serie.original_name || "Titolo Sconosciuto";
+
         serieElement.innerHTML = `
-            <div class="relative aspect-[2/3] w-full overflow-hidden bg-zinc-800">
+            <div class="relative aspect-[2/3] w-full overflow-hidden bg-zinc-800 flex-shrink-0">
                 <img 
                     src="https://image.tmdb.org/t/p/w300${serie.poster_path}" 
-                    alt="${serie.original_name}" 
+                    alt="${serieTitle}" 
                     class="w-full h-full object-cover"
                     loading="lazy"
                 >
@@ -173,29 +178,28 @@ function updateSeriesHtml() {
                     right-1 
                     bg-black/85 
                     text-white 
-                    text-[8px] 
+                    text-[7px] sm:text-[7.5px] md:text-[8px] lg:text-[9px] xl:text-[10px]
                     px-1 
                     py-0.2
                     rounded-[3px]
                     font-black
                 ">
-                    ⭐${serie.vote_average.toFixed(1)}
+                    ⭐${serie.vote_average ? serie.vote_average.toFixed(1) : "0.0"}
                 </span>
             </div>
 
-            <div class="p-1.5 whitespace-normal leading-tight">
+            <div class="p-1 sm:p-1.5 whitespace-normal leading-tight flex flex-col justify-between flex-grow overflow-hidden">
                 <h2 class="
-                    text-[9px]
+                    text-[7px] sm:text-[8px] md:text-[9px] lg:text-[10px] xl:text-[11px]
                     font-bold 
                     text-zinc-200 
-                    line-clamp-1
-                    truncate
+                    line-clamp-2
                     group-hover:text-red-500
                     transition-colors
-                " title="${serie.original_name}">
-                    ${serie.original_name}
+                " title="${serieTitle}">
+                    ${serieTitle}
                 </h2>
-                <p class="text-[8px] text-zinc-500 font-semibold mt-0.5">
+                <p class="text-[6px] sm:text-[7px] md:text-[8px] lg:text-[9px] xl:text-[10px] text-zinc-500 font-semibold mt-auto">
                     ${serie.first_air_date?.split("-")[0] || "N/D"}
                 </p>
             </div>
