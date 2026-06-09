@@ -96,26 +96,26 @@ Il progetto esegue chiamate dinamiche a seconda della pagina visitata:
   * **Endpoint:** `GET /tv/{id}`
   * **URL Completo:** `https://api.themoviedb.org/3/tv/{id}?language=it-IT`
 
---
+---
 
 ## Preview Web Site
 
-## Foto - 01-index.html
+### Foto - 01-index.html
 <div align="center">
 <img src="img/01-index.png" alt="Descrizione" width="400">
 </div>
 
-## Foto - 02-movies.html
+### Foto - 02-movies.html
 <div align="center">
 <img src="img/02-movies.png" alt="Descrizione" width="400">
 </div>
 
-## Foto - 03-series.html
+### Foto - 03-series.html
 <div align="center">
 <img src="img/03-series.png" alt="Descrizione" width="400">
 </div>
 
-## Foto - 04-profile.html
+### Foto - 04-profile.html
 <div align="center">
 <img src="img/04-profile.png" alt="Descrizione" width="400">
 </div>
