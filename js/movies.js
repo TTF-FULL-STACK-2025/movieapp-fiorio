@@ -19,7 +19,7 @@ async function updateMovies() {
     movies = data.results;
     console.log("Film 'Now Playing' caricati con successo:", movies);
 
-    updateMoviesGridHtml();
+    updateMoviesHtml();
   } catch (err) {
     console.error("Errore durante il recupero dei film:", err);
     const gridContainer = document.getElementById("moviesGrid");
@@ -33,7 +33,7 @@ async function updateMovies() {
   }
 }
 
-function updateMoviesGridHtml() {
+function updateMoviesHtml() {
   const gridContainer = document.getElementById("moviesGrid");
   const countContainer = document.getElementById("moviesCount");
   
@@ -124,5 +124,4 @@ function updateMoviesGridHtml() {
   });
 }
 
-// Inizializza il caricamento dei film
-fetchNowPlayingMovies();
+updateMovies();
