@@ -52,15 +52,11 @@ function updateSeriesHtml() {
   }
 
   series.forEach(serie => {
-    const serieElement = document.createElement("div");
+    const serieElement = document.createElement("a");
+    serieElement.href = `detail.html?id=${serie.id}&type=tv`;
 
     serieElement.className = `
-        w-[85px] min-w-[85px] max-w-[85px]
-        sm:w-[100px] sm:min-w-[100px] sm:max-w-[100px]
-        md:w-[115px] md:min-w-[115px] md:max-w-[115px]
-        lg:w-[130px] lg:min-w-[130px] lg:max-w-[130px]
-        xl:w-[145px] xl:min-w-[145px] xl:max-w-[145px]
-        h-[170px] sm:h-[195px] md:h-[215px] lg:h-[240px] xl:h-[265px]
+        movie-card
         bg-zinc-900
         rounded-md
         overflow-hidden
