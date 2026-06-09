@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MovieApp Esercizio</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/movies.js" type="module"></script>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-black text-white min-h-screen font-sans antialiased">
+
+    <header class="flex flex-col sm:flex-row justify-between items-center bg-gray-800 p-4 gap-4">
+        <div class="flex items-center space-x-4">
+            <img src="img/logo-m.png" alt="Logo" class="h-6 sm:h-8 md:h-10 lg:h-12">
+            <h1 class="text-xl md:text-2xl font-bold">MovieApp</h1>
+        </div>
+        <div class="flex items-center space-x-4 text-sm md:text-base">
+            <a href="index.html" class="text-gray-400 hover:text-white">Home</a>
+            <a href="movies.html" class="text-white font-semibold">Movies</a>
+            <a href="series.html" class="text-gray-400 hover:text-white">Serie</a>
+            <a href="profile.html" class="text-gray-400 hover:text-white">Profilo</a>
+        </div>
+    </header>
+
+    <main class="px-4 md:px-8 py-8 md:py-12 space-y-12">
+
+        <div class="flex flex-col items-center text-center space-y-3 max-w-3xl mx-auto">
+            <h1 class="text-3xl md:text-5xl font-extrabold tracking-tight text-red-600 uppercase">
+                Esplora i Film
+            </h1>
+            <p class="text-gray-400 text-sm md:text-base leading-relaxed max-w-2xl">
+                Scopri le ultime novità e i film del momento. Sfoglia il nostro catalogo completo e trova la tua prossima visione.
+            </p>
+        </div>
+
+        <div class="space-y-6">
+            <div class="flex justify-between items-center border-b border-zinc-800 pb-3">
+                <h2 class="text-xl md:text-2xl font-bold tracking-wide text-gray-200">
+                    Tutti i Film (Now Playing)
+                </h2>
+                <span id="moviesCount" class="text-xs md:text-sm text-zinc-500 font-semibold">Caricamento in corso...</span>
+            </div>
+            
+            <div id="moviesGrid" class="flex flex-wrap gap-3 sm:gap-4 md:gap-5 justify-center py-2 px-1">
+
+                <div class="flex justify-center items-center py-12">
+                    <div class="animate-spin rounded-full h-10 w-10 border-b-2 border-red-600"></div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer class="bg-gray-800 text-center p-4 mt-12 text-sm">
+        &copy; 2026 MovieApp. All rights reserved.
+    </footer>
+
+</body>
+</html>
