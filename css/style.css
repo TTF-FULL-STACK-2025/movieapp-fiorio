@@ -1,4 +1,3 @@
-
 img {
     max-width: 100%;
     height: auto;
@@ -11,4 +10,112 @@ img {
 .scrollbar-hide {
     -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: none;  /* Firefox */
+}
+
+.bg-zinc-900 {
+    background-color: #18181b !important;
+}
+.border-zinc-800\/80 {
+    border-color: rgba(39, 39, 42, 0.8) !important;
+}
+.text-zinc-200 {
+    color: #e4e4e7 !important;
+}
+.text-zinc-300 {
+    color: #d4d4d8 !important;
+}
+.text-zinc-400 {
+    color: #a1a1aa !important;
+}
+.text-zinc-500 {
+    color: #71717a !important;
+}
+
+.movie-card {
+    width: 85px !important;
+    min-width: 85px !important;
+    max-width: 85px !important;
+    height: 170px !important;
+}
+
+@media (min-width: 640px) {
+    .movie-card {
+        width: 100px !important;
+        min-width: 100px !important;
+        max-width: 100px !important;
+        height: 195px !important;
+    }
+}
+
+@media (min-width: 768px) {
+    .movie-card {
+        width: 115px !important;
+        min-width: 115px !important;
+        max-width: 115px !important;
+        height: 215px !important;
+    }
+}
+
+@media (min-width: 1024px) {
+    .movie-card {
+        width: 130px !important;
+        min-width: 130px !important;
+        max-width: 130px !important;
+        height: 240px !important;
+    }
+}
+
+@media (min-width: 1280px) {
+    .movie-card {
+        width: 145px !important;
+        min-width: 145px !important;
+        max-width: 145px !important;
+        height: 265px !important;
+    }
+}
+
+.detail-backdrop {
+    width: 100%;
+    height: 35vh;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+@media (min-width: 640px) {
+    .detail-backdrop {
+        height: 48vh;
+    }
+}
+
+@media (min-width: 768px) {
+    .detail-backdrop {
+        height: 55vh;
+    }
+}
+
+.detail-content-container {
+    max-width: 72rem; 
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    position: relative;
+    z-index: 20;
+    padding-bottom: 4rem;
+    margin-top: -12vh; 
+}
+
+@media (min-width: 640px) {
+    .detail-content-container {
+        padding-left: 2rem;
+        padding-right: 2rem;
+        margin-top: -18vh;
+    }
+}
+
+@media (min-width: 768px) {
+    .detail-content-container {
+        margin-top: -24vh;
+    }
 }
